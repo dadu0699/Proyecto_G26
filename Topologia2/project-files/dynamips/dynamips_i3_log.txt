@@ -1,0 +1,20 @@
+Apr 30 14:55:02.042 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Apr 30 14:55:02.044 HYPERVISOR: Started on IP = localhost, TCP port = 57686.
+Apr 30 14:55:02.516 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 30 14:55:02.516 HYPERVISOR: exec_cmd: hypervisor working_dir C:\proyectos\USAC\Redes\Proyecto_G26\Topologia2\project-files\dynamips 
+Apr 30 14:55:02.516 GENERAL: working_dir=C:\proyectos\USAC\Redes\Proyecto_G26\Topologia2\project-files\dynamips
+Apr 30 14:55:02.517 HYPERVISOR: exec_cmd: hypervisor working_dir C:\proyectos\USAC\Redes\Proyecto_G26\Topologia2\project-files\dynamips\f88c73ef-c4d2-4926-a510-ce0a274328ee 
+Apr 30 14:55:02.518 GENERAL: working_dir=C:\proyectos\USAC\Redes\Proyecto_G26\Topologia2\project-files\dynamips\f88c73ef-c4d2-4926-a510-ce0a274328ee
+Apr 30 14:55:02.519 HYPERVISOR: exec_cmd: vm create ESW4 4 c3725 
+Apr 30 14:55:02.520 VM: VM ESW4 created.
+Apr 30 14:55:02.521 HYPERVISOR: exec_cmd: vm set_con_tcp_port ESW4 5003 
+Apr 30 14:55:02.521 HYPERVISOR: exec_cmd: c3725 get_mac_addr ESW4 
+Apr 30 14:55:02.522 HYPERVISOR: exec_cmd: vm set_disk0 ESW4 1 
+Apr 30 14:55:02.522 HYPERVISOR: exec_cmd: vm set_exec_area ESW4 64 
+Apr 30 14:55:02.523 HYPERVISOR: exec_cmd: vm get_status ESW4 
+Apr 30 14:55:02.523 HYPERVISOR: exec_cmd: vm set_idle_pc ESW4 0x60bf8ba0 
+Apr 30 14:55:02.525 HYPERVISOR: exec_cmd: vm set_ios ESW4 C:/Users/dadu/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Apr 30 14:55:02.525 HYPERVISOR: exec_cmd: c3725 set_mac_addr ESW4 c204.3a70.0000 
+Apr 30 14:55:02.526 HYPERVISOR: exec_cmd: vm set_nvram ESW4 256 
+Apr 30 14:55:02.526 HYPERVISOR: exec_cmd: vm get_status ESW4 
+Apr 30 14:55:02.527 HYPERVISOR: exec_cmd: vm slot_add_binding ESW4 1 0 NM-16ESW 
