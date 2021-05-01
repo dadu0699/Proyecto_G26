@@ -1,0 +1,24 @@
+<div class="container">
+  <h2><strong>Ventas<span>( {{sales.length}} )</span></strong></h2>
+  <br>
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Libro</th>
+        <th scope="col">Vendedor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-template ngFor let-sale [ngForOf]="sales">
+        <tr>
+          <th scope="row">{{sale.id}}</th>
+          <td>{{sale.book}}</td>
+          <td>{{sale.seller}}</td>
+        </tr>
+      </ng-template>
+
+    </tbody>
+  </table>
+</div>

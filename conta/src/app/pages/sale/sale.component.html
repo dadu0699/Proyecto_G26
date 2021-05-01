@@ -1,0 +1,35 @@
+<!-- Form-->
+<div class="form">
+  <div class="form-panel one">
+    <div class="form-header">
+      <h1>Venta</h1>
+    </div>
+    <div class="form-content">
+
+      <form #formBook="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="book">Libro</label>
+          <select id="book" name="book" #book="ngModel" [(ngModel)]="sale.bookID" required="required">
+            <option *ngFor="let book of books" [value]="book.id">
+              {{book.title}}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="seller">Vendedor</label>
+          <select id="seller" name="seller" #seller="ngModel" [(ngModel)]="sale.sellerID" required="required">
+            <option *ngFor="let seller of sellers" [value]="seller.id">
+              {{seller.firstName}} {{seller.lastName}}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <button type="submit">Guardar</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
