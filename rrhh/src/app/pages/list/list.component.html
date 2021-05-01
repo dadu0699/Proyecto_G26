@@ -1,0 +1,30 @@
+<div class="container">
+  <h2><strong>Vendedores<span>( {{sellers.length}} )</span></strong></h2>
+  <hr>
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">DPI</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Teléfono</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-template ngFor let-seller [ngForOf]="sellers">
+        <tr>
+          <th scope="row">{{seller.id}}</th>
+          <td>{{seller.dpi}}</td>
+          <td>{{seller.firstName}}</td>
+          <td>{{seller.lastName}}</td>
+          <td>{{seller.address}}</td>
+          <td>{{seller.phone}}</td>
+        </tr>
+      </ng-template>
+
+    </tbody>
+  </table>
+</div>

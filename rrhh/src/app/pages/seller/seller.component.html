@@ -1,0 +1,40 @@
+<!-- Form-->
+<div class="form">
+  <div class="form-panel one">
+    <div class="form-header">
+      <h1>Vendedor</h1>
+    </div>
+    <div class="form-content">
+
+      <form #formBook="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="dpi">DPI</label>
+          <input type="text" id="dpi" name="dpi" #dpi="ngModel" [(ngModel)]="seller.dpi" required="required" />
+        </div>
+        <div class="form-group">
+          <label for="firstName">Nombre</label>
+          <input type="text" id="firstName" name="firstName" #firstName="ngModel" [(ngModel)]="seller.firstName"
+            required="required" />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Apellido</label>
+          <input type="text" id="lastName" name="lastName" #lastName="ngModel" [(ngModel)]="seller.lastName"
+            required="required" />
+        </div>
+        <div class="form-group">
+          <label for="address">Dirección</label>
+          <input type="text" id="address" name="address" #address="ngModel" [(ngModel)]="seller.address"
+            required="required" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Teléfono</label>
+          <input type="text" id="phone" name="phone" #phone="ngModel" [(ngModel)]="seller.phone" required="required" />
+        </div>
+        <div class="form-group">
+          <button type="submit">Guardar</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
