@@ -13,7 +13,7 @@ const seller = {
             address,
             phone
         } = params;
-        const query = `INSERT INTO Seller (sellerID, firstName,
+        const query = `INSERT INTO Seller (dpi, firstName,
                 lastName, address, phone)
             VALUES ("${dpi}", "${firstName}", "${lastName}", 
                 "${address}", "${phone}");`;
