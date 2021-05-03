@@ -1,0 +1,114 @@
+-------------------------------------------- VLAN
+-------- ESW1
+conf t 
+
+vlan 10
+name ADMIN
+exit
+
+vlan 20
+name BD
+exit
+
+vlan 30
+name WEB
+exit
+
+vlan 40
+name RRHH
+exit
+
+vlan 50
+name CONTA
+exit
+
+end
+-------------------------------------------- TRONCALES
+-------- ESW1
+conf t
+
+int fa1/1
+switchport mode access
+switchport access vlan 10
+exit
+
+int fa1/2
+switchport mode access
+switchport access vlan 10
+exit
+
+int fa1/3
+switchport mode access
+switchport access vlan 20
+exit
+
+int fa1/4
+switchport mode access
+switchport access vlan 30
+exit
+
+int fa1/5
+switchport mode access
+switchport access vlan 40
+exit
+
+int fa1/6
+switchport mode access
+switchport access vlan 50
+exit
+
+int f1/0
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,50,1002-1005
+exit
+
+end
+-------------------------------------------- 
+-------- R1
+conf t
+
+int f0/0.10
+encapsulation dot1q 10
+ip address 192.168.126.1 255.255.255.252
+ip dhcp pool admin
+network 192.168.126.0 255.255.255.252
+default-route 192.168.126.1
+exit
+
+int f0/0.20
+encapsulation dot1q 20
+ip address 192.168.126.5 255.255.255.252
+ip dhcp pool bd
+network 192.168.126.4 255.255.255.252
+default-route 192.168.126.5
+exit
+
+int f0/0.30
+encapsulation dot1q 30
+ip address 192.168.126.9 255.255.255.252
+ip dhcp pool web
+network 192.168.126.8 255.255.255.252
+default-route 192.168.126.9
+exit
+
+int f0/0.40
+encapsulation dot1q 40
+ip address 192.168.126.13 255.255.255.252
+ip dhcp pool rrhh
+network 192.168.126.12 255.255.255.252
+default-route 192.168.126.13
+exit
+
+int f0/0.50
+encapsulation dot1q 50
+ip address 192.168.126.17 255.255.255.252
+ip dhcp pool conta
+network 192.168.126.16 255.255.255.252
+default-route 192.168.126.17
+exit
+
+int f0/0
+no shutdown
+exit
+
+end
