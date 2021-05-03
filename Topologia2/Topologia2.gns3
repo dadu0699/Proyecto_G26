@@ -16,7 +16,53 @@
     "supplier": null,
     "topology": {
         "computes": [],
-        "drawings": [],
+        "drawings": [
+            {
+                "drawing_id": "0e7dfde9-c99d-4768-948c-126997b9c057",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"31\" width=\"44\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"14.0\" font-weight=\"bold\">Po1</text></svg>",
+                "x": -22,
+                "y": -65,
+                "z": 2
+            },
+            {
+                "drawing_id": "d934ebca-b210-4145-9222-2507a107b5a9",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"31\" width=\"44\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"14.0\" font-weight=\"bold\">Po2</text></svg>",
+                "x": -172,
+                "y": -65,
+                "z": 2
+            },
+            {
+                "drawing_id": "d4748ac8-6c37-455d-9f63-86f2daf9ce5e",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"31\" width=\"44\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"14.0\" font-weight=\"bold\">Po3</text></svg>",
+                "x": -147,
+                "y": -240,
+                "z": 2
+            },
+            {
+                "drawing_id": "f00d176c-ff12-4bd1-a4bd-8f979980c918",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"31\" width=\"44\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"14.0\" font-weight=\"bold\">Po4</text></svg>",
+                "x": -47,
+                "y": -240,
+                "z": 2
+            },
+            {
+                "drawing_id": "6de168c0-2cdf-4c59-85ee-633d19f06d79",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"31\" width=\"44\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"MS Shell Dlg 2\" font-size=\"14.0\" font-weight=\"bold\">Po5</text></svg>",
+                "x": -97,
+                "y": -190,
+                "z": 2
+            }
+        ],
         "links": [
             {
                 "filters": {},
