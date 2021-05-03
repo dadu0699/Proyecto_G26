@@ -26,3 +26,22 @@
 
 
 ## Topología 3<a name="idTopo3"></a>
+
+### Tabla 1
+| VLAN | DIRECCIÓN DE RED | PRIMERA ASIGNABLE | ULTIMA ASIGNABLE | BROADCAST       |
+|:----:|------------------|-------------------|------------------|-----------------|
+| 10   | 192.168.xxx.xxx  | 192.168.xxx.xxx   | 192.168.xxx.xxx  | 192.168.xxx.xxx |
+| 20   | 192.168.xxx.xxx  | 192.168.xxx.xxx   | 192.168.xxx.xxx  | 192.168.xxx.xxx |
+| 30   | 192.168.xxx.xxx  | 192.168.xxx.xxx   | 192.168.xxx.xxx  | 192.168.xxx.xxx |
+| 40   | 192.168.xxx.xxx  | 192.168.xxx.xxx   | 192.168.xxx.xxx  | 192.168.xxx.xxx |
+| 50   | 192.168.xxx.xxx  | 192.168.xxx.xxx   | 192.168.xxx.xxx  | 192.168.xxx.xxx |
+
+
+### Tabla 2
+| VIRTUALIZADA |   DISPOSITIVO    | VLAN |   DIRECCIÓN IP   |   MASCARA DE RED   |    GATEWAY      |
+|:------------:|------------------|------|------------------|--------------------|-----------------|
+|     NO       | ADMINISTRADORES  |  10  |   AUTOMÁTICA     |  192.168.xxx.xxx   | 255.255.255.224 |
+|     SI       |   SRV_BD         |  20  | 192.168.xxx.xxx  |  192.168.xxx.xxx   | 255.255.255.240 |
+|     SI       |   SRV_WEB        |  30  | 192.168.xxx.xxx  |  192.168.xxx.xxx   | 255.255.255.128 |
+|     SI       |   SRV_RRHH       |  40  | 192.168.xxx.xxx  |  192.168.xxx.xxx   | 255.255.255.192 |
+|     SI       |   SRV_CONTA      |  50  | 192.168.xxx.xxx  |  192.168.xxx.xxx   | 255.255.255.192 |
