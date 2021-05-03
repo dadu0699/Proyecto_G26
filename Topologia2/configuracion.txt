@@ -313,9 +313,9 @@ exit
 
 int f0/0.20
 encapsulation dot1q 20
-ip address 192.168.126.225 255.255.255.248
+ip address 192.168.126.225 255.255.255.240
 ip dhcp pool conta
-network 192.168.126.224 255.255.255.248
+network 192.168.126.224 255.255.255.240
 default-route 192.168.126.225
 exit
 
