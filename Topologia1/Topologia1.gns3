@@ -492,7 +492,7 @@
                 "symbol": ":/symbols/router.svg",
                 "template_id": "645508bd-e31c-4d84-9161-94d0124d166b",
                 "width": 66,
-                "x": -483,
+                "x": -558,
                 "y": 53,
                 "z": 1
             },
@@ -549,8 +549,8 @@
                 "symbol": ":/symbols/router.svg",
                 "template_id": "645508bd-e31c-4d84-9161-94d0124d166b",
                 "width": 66,
-                "x": 117,
-                "y": -247,
+                "x": 192,
+                "y": 53,
                 "z": 1
             },
             {
