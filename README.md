@@ -4,7 +4,6 @@
 - [Topología 1](#idTopo1)
 - [Topología 2](#idTopo2)
 - [Topología 3](#idTopo3)
-- [Configuración VPN ](#idVPN)
 
 
 ### Tabla de configuraciones de la nube
