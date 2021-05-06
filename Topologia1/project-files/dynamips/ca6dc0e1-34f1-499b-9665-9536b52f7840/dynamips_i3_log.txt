@@ -1,0 +1,30 @@
+May 06 00:20:14.613 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+May 06 00:20:14.614 HYPERVISOR: Started on IP = localhost, TCP port = 51716.
+May 06 00:20:15.109 HYPERVISOR: exec_cmd: hypervisor version 
+May 06 00:20:15.110 HYPERVISOR: exec_cmd: hypervisor working_dir D:\StefanyC\7mo Semestre\Redes\Proyecto\Proyecto_G26\Topologia1\project-files\dynamips 
+May 06 00:20:15.110 GENERAL: working_dir=D:\StefanyC\7mo Semestre\Redes\Proyecto\Proyecto_G26\Topologia1\project-files\dynamips
+May 06 00:20:15.110 HYPERVISOR: exec_cmd: ethsw create Switch2 
+May 06 00:20:20.010 HYPERVISOR: exec_cmd: nio create_udp udp-d0bbabd3-eeca-4001-9a42-900331a4609c 10001 127.0.0.1 10000 
+May 06 00:20:20.011 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-d0bbabd3-eeca-4001-9a42-900331a4609c 
+May 06 00:20:20.033 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-d0bbabd3-eeca-4001-9a42-900331a4609c 1 
+May 06 00:20:20.166 HYPERVISOR: exec_cmd: nio create_udp udp-02f3807b-002f-4fbb-bf9c-91e378afeba6 10008 127.0.0.1 10009 
+May 06 00:20:20.167 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-02f3807b-002f-4fbb-bf9c-91e378afeba6 
+May 06 00:20:20.188 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-02f3807b-002f-4fbb-bf9c-91e378afeba6 1 
+May 06 00:20:20.604 HYPERVISOR: exec_cmd: nio create_udp udp-22c5136a-a626-415d-b089-9c13f5bde8f4 10016 127.0.0.1 10017 
+May 06 00:20:20.604 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-22c5136a-a626-415d-b089-9c13f5bde8f4 
+May 06 00:20:20.621 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-22c5136a-a626-415d-b089-9c13f5bde8f4 1 
+May 06 00:20:21.040 HYPERVISOR: exec_cmd: nio create_udp udp-56ba7c04-8008-4259-b325-a0edc9c776fe 10024 127.0.0.1 10025 
+May 06 00:20:21.040 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-56ba7c04-8008-4259-b325-a0edc9c776fe 
+May 06 00:20:21.058 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-56ba7c04-8008-4259-b325-a0edc9c776fe 1 
+May 06 00:28:19.708 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-d0bbabd3-eeca-4001-9a42-900331a4609c 1 
+May 06 00:28:19.708 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-56ba7c04-8008-4259-b325-a0edc9c776fe 1 
+May 06 00:28:19.709 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-02f3807b-002f-4fbb-bf9c-91e378afeba6 1 
+May 06 00:28:19.709 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-22c5136a-a626-415d-b089-9c13f5bde8f4 1 
+May 06 00:28:19.754 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-d0bbabd3-eeca-4001-9a42-900331a4609c 1 
+May 06 00:28:19.754 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-56ba7c04-8008-4259-b325-a0edc9c776fe 1 
+May 06 00:28:19.755 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-02f3807b-002f-4fbb-bf9c-91e378afeba6 1 
+May 06 00:28:19.755 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-22c5136a-a626-415d-b089-9c13f5bde8f4 1 
+May 06 01:53:10.345 HYPERVISOR: exec_cmd: ethsw delete Switch2 
+May 06 01:53:10.464 HYPERVISOR: exec_cmd: hypervisor stop 
+May 06 01:53:10.899 HYPERVISOR: Stopped.
+May 06 01:53:10.899 GENERAL: reset done.
