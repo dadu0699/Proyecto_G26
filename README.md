@@ -11,6 +11,12 @@
 
 
 ## Topología 1<a name="idTopo1"></a>
+
+<div align="center">
+    <img src="./assets/images/topologias/1.PNG" width="400">
+    <p align="center">Diseño Topología 1</p>
+</div>
+
 | DIRECCIÓN DE RED | PRIMERA ASIGNABLE | ULTIMA ASIGNABLE | BROADCAST       | MASCARA         | HOSTS NECESARIOS | CANTIDAD DE HOSTS |
 |------------------|-------------------|------------------|-----------------|-----------------|------------------|-------------------|
 | 10.26.0.0        | 10.26.0.1         | 10.26.0.6        | 10.26.0.7       | 255.255.255.248 | 4                | 6                 |
@@ -29,6 +35,10 @@
 
 ## Topología 2<a name="idTopo2"></a>
 
+<div align="center">
+    <img src="./assets/images/topologias/2.PNG" width="400">
+    <p align="center">Diseño Topología 2</p>
+</div>
 
 ### Tabla de direccionamiento IP
 | VLAN | DIRECCIÓN DE RED | PRIMERA ASIGNABLE | ULTIMA ASIGNABLE | BROADCAST       | MASCARA         | HOSTS NECESARIOS | CANTIDAD DE HOSTS |
@@ -392,6 +402,11 @@ end
 ```
 
 ## Topología 3<a name="idTopo3"></a>
+
+<div align="center">
+    <img src="./assets/images/topologias/3.PNG" width="400">
+    <p align="center">Diseño Topología 3</p>
+</div>
 
 ### Tabla 1
 | VLAN | DIRECCIÓN DE RED | PRIMERA ASIGNABLE | ULTIMA ASIGNABLE | BROADCAST       | MASCARA         |  CANTIDAD DE HOSTS |
