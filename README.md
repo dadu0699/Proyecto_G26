@@ -492,34 +492,48 @@ conf t
 
 int f0/0.10
 encapsulation dot1q 10
-ip address 192.168.126.1 255.255.255.248
+ip address 192.168.26.1 255.255.255.224
 ip dhcp pool admin
-network 192.168.126.0 255.255.255.248
-default-route 192.168.126.1
+network 192.168.26.0 255.255.255.224
+default-route 192.168.26.1
 exit
 
 int f0/0.20
 encapsulation dot1q 20
-ip address 192.168.126.9 255.255.255.248
+ip address 192.168.26.33 255.255.255.224
 exit
 
 int f0/0.30
 encapsulation dot1q 30
-ip address 192.168.126.17 255.255.255.248
+ip address 192.168.26.65 255.255.255.224
 exit
 
 int f0/0.40
 encapsulation dot1q 40
-ip address 192.168.126.25 255.255.255.248
+ip address 192.168.26.97 255.255.255.224
 exit
 
 int f0/0.50
 encapsulation dot1q 50
-ip address 192.168.126.33 255.255.255.248
+ip address 192.168.26.129 255.255.255.224
 exit
 
 int f0/0
 no shutdown
+exit
+
+int fa0/1
+ip address 10.26.64.3 255.255.192.0
+no shutdown
+
+router rip 
+version 2
+network 10.26.64.0
+network 192.168.26.0
+network 192.168.26.32
+network 192.168.26.64
+network 192.168.26.96
+network 192.168.26.128
 exit
 
 end
