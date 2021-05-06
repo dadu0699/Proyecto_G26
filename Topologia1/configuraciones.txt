@@ -34,11 +34,10 @@ vrrp 192 priority 250
 vrrp 192 preempt 
 exit 
 
-conf t 
 int fa0/1
-vrrp 0 ip 10.26.0.5 
-vrrp 0 priority 250
-vrrp 0 preempt 
+vrrp 26 ip 10.26.0.5 
+vrrp 26 priority 250
+vrrp 26 preempt 
 exit 
 
 ========= R3 ============
@@ -87,17 +86,14 @@ vrrp 192 ip 10.26.192.5
 vrrp 192 priority 50
 exit 
 
-conf t 
 int fa0/1
-vrrp 0 ip 10.26.128.5 
-vrrp 0 priority 50 
+vrrp 128 ip 10.26.128.5 
+vrrp 128 priority 50 
 exit 
 
-
-conf t 
 int fa1/0
-vrrp 0 ip 10.26.0.5 
-vrrp 0 priority 50 
+vrrp 26 ip 10.26.0.5 
+vrrp 26 priority 50 
 exit 
 
 ======== R4 ============
@@ -174,17 +170,15 @@ standby 128 priority 50
 exit 
 
 
-conf t 
 int fa0/0
-standby 128 ip 10.26.64.5 
-standby 128 priority 50
+standby 192 ip 10.26.192.5 
+standby 192 priority 50
 exit 
 
 
-conf t 
 int fa1/0
-standby 128 ip 10.26.128.5 
-standby 128 priority 50
+standby 64 ip 10.26.64.5 
+standby 64 priority 50
 exit 
 ========= R7 ============
 conf t
@@ -220,7 +214,7 @@ standby 64 priority 250
 standby 64 preempt 
 exit 
 
-conf t 
+
 int fa0/1
 standby 128 ip 10.26.128.5 
 standby 128 priority 250
