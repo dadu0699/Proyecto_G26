@@ -6,20 +6,6 @@
 - [Topología 3](#idTopo3)
 - [Configuración VPN ](#idVPN)
 
-## Topología 1<a name="idTopo1"></a>
-
-<div align="center">
-    <img src="./assets/images/topologias/1.PNG" width="400">
-    <p align="center">Diseño Topología 1</p>
-</div>
-
-| DIRECCIÓN DE RED | PRIMERA ASIGNABLE | ULTIMA ASIGNABLE | BROADCAST       | MASCARA         | HOSTS NECESARIOS | CANTIDAD DE HOSTS |
-|------------------|-------------------|------------------|-----------------|-----------------|------------------|-------------------|
-| 10.26.0.0        | 10.26.0.1         | 10.26.0.6        | 10.26.0.7       | 255.255.255.248 | 4                | 6                 |
-| 10.26.0.8        | 10.26.0.9         | 10.26.0.14       | 10.26.0.15      | 255.255.255.248 | 4                | 6                 |
-| 10.26.0.16       | 10.26.0.17        | 10.26.0.22       | 10.26.0.23      | 255.255.255.248 | 3                | 6                 |
-| 10.26.0.24       | 10.26.0.25        | 10.26.0.30       | 10.26.0.31      | 255.255.255.248 | 3                | 6                 |
-
 
 ### Tabla de configuraciones de la nube
 | TOPOLOGIA |     LOCAL PORT     	|  REMOTE HOST	|   REMOTE PORT  	|
@@ -29,12 +15,223 @@
 |    3   	|         3550      	|    10.8.0.2   |       3223    	| 
 |    4   	|         3555      	|    10.8.0.2   |       3228    	| 
 
+
+## Topología 1<a name="idTopo1"></a>
+
+<div align="center">
+    <img src="./assets/images/topologias/1.PNG" width="400">
+    <p align="center">Diseño Topología 1</p>
+</div>
+
+| DIRECCIÓN DE RED | PRIMERA ASIGNABLE | ULTIMA ASIGNABLE | BROADCAST       | MASCARA         |
+|------------------|-------------------|------------------|-----------------|-----------------|
+| 10.26.0.0        | 10.26.0.1         | 10.26.63.254     | 10.26.63.255    | 255.255.192.0   |
+| 10.26.64.0       | 10.26.64.1        | 10.26.127.254    | 10.26.127.255   | 255.255.192.0   |
+| 10.26.128.0      | 10.26.128.1       | 10.26.191.254    | 10.26.191.255   | 255.255.192.0   |
+| 10.26.192.0      | 10.26.192.1       | 10.26.255.254    | 10.26.0.31      | 255.255.192.0   |
+
+
+
+
+``` bash
+    ========= R6 ============
+conf t
+int fa0/1
+ip address 10.26.0.1 255.255.192.0
+no shutdown
+end
+write
+
+conf t
+int fa0/0
+ip address 10.26.192.4 255.255.192.0
+no shutdown
+end
+write
+
+conf t 
+router rip 
+version 2 
+network 10.26.0.0
+exit
+
+router rip 
+version 2
+network 10.26.192.0
+exit
+
+
+int fa0/0
+vrrp 192 ip 10.26.192.5 
+vrrp 192 priority 250
+vrrp 192 preempt 
+exit 
+
+
+
+========= R3 ============
+conf t
+int fa1/0
+ip address 10.26.0.2 255.255.192.0
+no shutdown
+end
+write
+
+conf t
+int fa0/0
+ip address 10.26.192.1 255.255.192.0
+no shutdown
+end
+write
+
+conf t
+int fa0/1
+ip address 10.26.128.3 255.255.192.0
+no shutdown
+end
+write
+
+conf t 
+router rip 
+version 2
+network 10.26.0.0
+exit
+
+
+router rip 
+version 2
+network 10.26.192.0
+exit
+
+
+router rip 
+version 2
+network 10.26.128.0
+exit
+
+conf t 
+int fa0/0
+vrrp 192 ip 10.26.192.5 
+vrrp 192 priority 50
+exit 
+
+
+======== R4 ============
+conf t
+int fa0/0
+ip address 10.26.192.2 255.255.192.0
+no shutdown
+end
+write
+
+conf t
+int fa0/1
+ip address 10.26.128.4 255.255.192.0
+no shutdown
+end
+write
+
+conf t 
+router rip 
+version 2
+network 10.26.192.0
+exit
+
+router rip 
+version 2
+network 10.26.128.0
+exit
+
+========= R5 ============
+conf t
+int fa0/0
+ip address 10.26.192.3 255.255.192.0
+no shutdown
+end
+write
+
+conf t
+int fa0/1
+ip address 10.26.128.1 255.255.192.0
+no shutdown
+end
+write
+
+conf t
+int fa1/0
+ip address 10.26.64.1 255.255.192.0
+no shutdown
+end
+write
+
+conf t 
+router rip 
+version 2
+network 10.26.192.0
+exit
+
+
+router rip 
+version 2
+network 10.26.128.0
+exit
+
+router rip 
+version 2
+network 10.26.64.0
+exit
+
+conf t 
+int fa0/1
+standby 128 ip 10.26.128.5 
+standby 128 priority 50
+exit 
+
+========= R7 ============
+conf t
+int fa0/0
+ip address 10.26.64.2 255.255.192.0
+no shutdown
+end
+write
+
+conf t
+int fa0/1
+ip address 10.26.128.2 255.255.192.0
+no shutdown
+end
+write
+
+conf t 
+router rip 
+version 2
+network 10.26.64.0
+exit
+
+
+router rip 
+version 2
+network 10.26.128.0
+exit
+
+int fa0/1
+standby 128 ip 10.26.128.5 
+standby 128 priority 250
+standby 128 preempt 
+exit
+
+copy running-config startup-config
+```
+
 ## Topología 2<a name="idTopo2"></a>
 
 <div align="center">
     <img src="./assets/images/topologias/2.PNG" width="400">
     <p align="center">Diseño Topología 2</p>
 </div>
+
+
+
 
 ### Tabla de direccionamiento IP
 | VLAN | DIRECCIÓN DE RED | PRIMERA ASIGNABLE | ULTIMA ASIGNABLE | BROADCAST       | MASCARA         | HOSTS NECESARIOS | CANTIDAD DE HOSTS |
