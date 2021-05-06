@@ -269,7 +269,7 @@ vtp mode client
 
 end
 -------------------------------------------- VLAN
--------- ESW1 o ESW4?
+-------- ESW1
 conf t 
 
 vlan 10
@@ -392,6 +392,18 @@ exit
 
 int f0/0
 no shutdown
+exit
+
+interface f0/1
+ip address 10.26.0.3 255.255.192.0
+
+router rip
+version 2
+network 10.26.0.0
+network 192.168.126.192
+network 192.168.126.224
+network 192.168.126.0
+network 192.168.126.128
 exit
 
 end
